@@ -1,0 +1,27 @@
+{
+    "name": "vendor/seven20-string-compressor",
+    "description": "A string compressor utility with unit tests",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^12.2"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Vendor\\Seven20StringCompressor\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "engrmayoronline"
+        }
+    ],
+    "scripts": {
+        "test": "phpunit"
+    }
+}
