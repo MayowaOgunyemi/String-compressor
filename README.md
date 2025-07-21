@@ -43,7 +43,7 @@
 
 ## Overview
 
-String-compressor is a lightweight, PSR-4-compliant PHP utility that compresses strings by aggregating character occurrences, regardless of their positions (non-consecutive). Built with modular design principles and test-driven development (TDD) in mind.
+`String-compressor` is a lightweight, PSR-4-compliant PHP utility that compresses strings by aggregating character occurrences, regardless of their positions `(non-consecutive)`. Built with modular design principles and test-driven development (TDD) in mind.
 
 ### Features
 
