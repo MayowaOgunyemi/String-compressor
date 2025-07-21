@@ -37,6 +37,7 @@
     - [Usage](#usage)
     - [Testing](#testing)
     - [Architecture](#architecture)
+    - [Solution Images](#solution-images)
 
 ---
 
@@ -63,7 +64,7 @@ This project requires the following dependencies:
 
 - **Programming Language:** PHP
 - **Package Manager:** Composer
-- **Test framework** PHPUnit ^12.2 (for running tests)
+- **Test framework:** PHPUnit ^12.2 (for running tests)
 
 ### Installation
 
@@ -102,16 +103,16 @@ You can modify the input value to your choice within the index.php file
 
 ### Testing
 
-String-compressor uses the PHPUnit test framework to write unit tests and it covers various edge cases. 
-**Example test cases**
-✅ Normal input compression
-✅ Repeated characters
-✅ Mixed characters
-✅ Empty string
-✅ Whitespace-only input
-✅ Exception handling
-✅ Case sensitivity
-✅ Non-alphabetic characters
+`String-compressor` uses the **PHPUnit** test framework to write unit tests and it covers various edge cases. 
+**Example test cases:**
+- ✅ Normal input compression
+- ✅ Repeated characters
+- ✅ Mixed characters
+- ✅ Empty string
+- ✅ Whitespace-only input
+- ✅ Exception handling
+- ✅ Case sensitivity
+- ✅ Non-alphabetic characters
 
 Run the test suite with:
 
@@ -131,6 +132,14 @@ vendor/bin/phpunit
 - Strict separation of concerns
 - Error handling and input validation included
 - PSR-4 autoloading enabled via Composer
+
+### Solution Images
+**Process Model:**
+![String Compressor Process Model](images/model.png)
+
+**Compression Exercise Demo:**
+![String Compressor Exercise Demo](images/demo.png)
+
 
 ---
 
