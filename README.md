@@ -27,28 +27,31 @@
 
 ## Table of Contents
 
-- [Overview](#overview)
-- [Getting Started](#getting-started)
+- [STRING-COMPRESSOR](#string-compressor)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+    - [Features](#features)
+  - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
     - [Usage](#usage)
     - [Testing](#testing)
+    - [Architecture](#architecture)
 
 ---
 
 ## Overview
 
-String-compressor is a lightweight developer tool that transforms strings into compact summaries by aggregating character counts, regardless of their order. It simplifies data storage, analysis, and transmission by providing concise representations of string data.
+String-compressor is a lightweight, PSR-4-compliant PHP utility that compresses strings by aggregating character occurrences, regardless of their positions (non-consecutive). Built with modular design principles and test-driven development (TDD) in mind.
 
-**Why String-compressor?**
+### Features
 
-This project aims to facilitate efficient string data summarization. The core features include:
-
-- 🧮 **Character Count Aggregation:** Counts total occurrences of each character, ignoring sequence, for quick insights.
-- 🚀 **Demo & Validation:** An example entry point in index.php demonstrates core functionality in action.
-- 🔧 **Configurable Testing:** Uses phpunit.xml to ensure code quality and stability through automated tests.
-- 📦 **Seamless Integration:** Managed with composer.json for easy dependency handling and project setup.
-- ⚡ **Efficient Data Representation:** Supports scenarios requiring compact string summaries for storage or analysis.
+The core features include:
+- Compresses any string by counting the number of times each character appears
+- Maintains the order of first appearance
+- Designed following SOLID principles and clean architecture
+- Fully unit-tested with PHPUnit. Ensures code quality and stability
+- Ready for extension and integration into other applications
 
 ---
 
@@ -60,10 +63,11 @@ This project requires the following dependencies:
 
 - **Programming Language:** PHP
 - **Package Manager:** Composer
+- **Test framework** PHPUnit ^12.2 (for running tests)
 
 ### Installation
 
-Build String-compressor from the source and install dependencies:
+Clone the repository and install dependencies via [Composer](https://getcomposer.org):
 
 1. **Clone the repository:**
 
@@ -87,23 +91,46 @@ Build String-compressor from the source and install dependencies:
 
 ### Usage
 
-Run the project with:
+Run the project in the terminal with:
 
 **Using [composer](https://www.php.net/):**
 
 ```sh
-php {entrypoint}
+php index.php
 ```
+You can modify the input value to your choice within the index.php file
 
 ### Testing
 
-String-compressor uses the {__test_framework__} test framework. Run the test suite with:
+String-compressor uses the PHPUnit test framework to write unit tests and it covers various edge cases. 
+**Example test cases**
+✅ Normal input compression
+✅ Repeated characters
+✅ Mixed characters
+✅ Empty string
+✅ Whitespace-only input
+✅ Exception handling
+✅ Case sensitivity
+✅ Non-alphabetic characters
+
+Run the test suite with:
 
 **Using [composer](https://www.php.net/):**
 
 ```sh
+composer test
+```
+
+You can also run tests manually:
+```sh
 vendor/bin/phpunit
 ```
+
+### Architecture
+- Follows Single Responsibility Principle (SRP)
+- Strict separation of concerns
+- Error handling and input validation included
+- PSR-4 autoloading enabled via Composer
 
 ---
 
