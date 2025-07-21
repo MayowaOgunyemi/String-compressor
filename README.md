@@ -90,6 +90,16 @@ Clone the repository and install dependencies via [Composer](https://getcomposer
 ❯ composer install
 ```
 
+4. **Exercise Code location:**
+See folder named: 
+- `**src**`
+  - `StringCompressor.php`
+
+5. **Unit tests code location:**
+See folder named: 
+- `**tests**`
+  - `StringCompressorTest.php`
+
 ### Usage
 
 Run the project in the terminal with:
